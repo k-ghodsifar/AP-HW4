@@ -1,0 +1,9 @@
+#include"shape.h"
+#ifndef THREE_H
+#define THREE_H
+class ThreeD : public Shape{
+ public:
+  ThreeD()=default;
+  ~ThreeD()=default;
+};
+#endif

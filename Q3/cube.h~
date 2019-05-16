@@ -1,0 +1,20 @@
+#include"threeD.h"
+#ifndef CUBE_H
+#define CUBE_H
+class Cube : public ThreeD
+{
+ public:
+  Cube(double);
+  Cube(double,double,double,double);
+  virtual ~Cube()=default;
+  virtual std::ostream& print(std::ostream&) override;
+  double getArea() const;
+  double getVolume() const;
+  friend std::ostream& operator<<(std::ostream& os,Cube& c);
+  
+  double lengthOfSideWay;
+  double x;
+  double y;
+  double z;
+};
+#endif

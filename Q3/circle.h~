@@ -1,0 +1,18 @@
+#include"twoD.h"
+#ifndef CIRCLE_H
+#define CIRCLE_H
+class Circle : public TwoD
+{
+ public:
+  Circle(double,double,double);
+  virtual ~Circle()=default;
+  virtual std::ostream& print(std::ostream&) override;
+  virtual double getSurrondings() const override;
+  double getArea() const;
+  friend std::ostream& operator<<(std::ostream& os,Circle& c);
+  
+  double radius;
+  double x;
+  double y;
+};
+#endif
